@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gede Satya</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3b82f6", // A standard blue that works well on dark backgrounds
+                        "background-light": "#f3f4f6",
+                        "background-dark": "#0f1115", // Very dark background like the screenshot
+                        "card-dark": "#181a20",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 h-screen flex flex-col items-center justify-center transition-colors duration-300">
+<div class="absolute top-4 right-4">
+<button class="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors" id="theme-toggle">
+<span class="material-icons-round dark:hidden">dark_mode</span>
+<span class="material-icons-round hidden dark:block">light_mode</span>
+</button>
+</div>
+<main class="w-full max-w-md px-6 flex flex-col items-center gap-8">
+<div class="flex items-center gap-4 animate-fade-in-down">
+<div class="relative group">
+<div class="absolute -inset-0.5 bg-primary/30 rounded-full blur opacity-50 group-hover:opacity-100 transition duration-500"></div>
+<img alt="Anime character avatar representing Gede Satya" class="relative w-20 h-20 rounded-full object-cover border-2 border-gray-200 dark:border-gray-700 shadow-lg" src="https://photos.app.goo.gl/AkEiZY81tfmVW3KM6"/>
+</div>
+<h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Gede Satya
+            </h1>
+</div>
+<p class="text-center text-gray-600 dark:text-gray-400 max-w-xs mx-auto">
+            Temukan rahasia yang tersembunyi.
+        </p>
+<button class="group relative w-full flex justify-center py-4 px-8 border border-transparent text-sm font-bold rounded-lg text-white bg-primary hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark transition-all duration-200 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transform hover:-translate-y-0.5" onclick="triggerPrank()">
+<span class="flex items-center gap-2 uppercase tracking-wider">
+<span class="material-icons-round text-lg">chat</span>
+                DAPATKAN NOMOR WHATSAPP
+            </span>
+</button>
+<footer class="mt-12 text-center text-xs text-gray-400 dark:text-gray-600">
+<p>© 2023 Prank Network. Just for fun.</p>
+</footer>
+</main>
+<script>
+        // Simple theme toggle logic
+        const toggleButton = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        // Set initial theme based on system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            htmlElement.classList.add('dark');
+        }
+        toggleButton.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+        });
+        function triggerPrank() {
+            // Simple visual feedback for the prank
+            alert("Kena prank! 😂");
+        }
+    </script>
+
+</body></html>
