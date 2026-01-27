@@ -236,7 +236,7 @@ document.querySelectorAll('.buy-btn').forEach(btn=>{
         const rank=card.dataset.rank;
         const price=card.dataset.price;
         const mcPlayer=localStorage.getItem('mcPlayer') || "Tidak Diketahui";
-        const waNumber = "+6287845203865";
+        const waNumber = "";
         const message = `Nama Minecraft: ${mcPlayer}\nRank yang Dibeli: ${rank}\nHarga: ${price}`;
         const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
         window.open(url,"_blank");
